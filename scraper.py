@@ -80,7 +80,7 @@ def scrape_business_data(search_for: str, total: int) -> BusinessList:
 
     with sync_playwright() as p:
         # Launch browser
-        browser = p.chromium.launch(headless=False)
+        browser = p.chromium.launch(headless=True)
         page = browser.new_page()
         page.goto("https://www.google.com/maps", timeout=3000)
 
